@@ -1,4 +1,5 @@
-# Etudiant en 3ème année d'informatique specialisé en Big Data & IA
+# Mon Github mes projets
+[Publication] (https://github.com/LostWin)
 
 # EDUCATION 
 KEYCE Informatique & Intelligence Artificielle	Yaoundé,Cameroun
