@@ -2,8 +2,6 @@
 
 [Mon Github](https://github.com/LostWin)
 
-[Voir mon Dashboard Power BI](https://app.powerbi.com/view?r=XXXXX)
-
 
 # EDUCATION 
 KEYCE Informatique & Intelligence Artificielle	Yaoundé,Cameroun
