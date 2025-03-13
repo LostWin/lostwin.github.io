@@ -1,5 +1,5 @@
 # Mon Github mes projets
-[Publication] (https://github.com/LostWin)
+[Publication](https://github.com/LostWin)
 
 # EDUCATION 
 KEYCE Informatique & Intelligence Artificielle	Yaoundé,Cameroun
