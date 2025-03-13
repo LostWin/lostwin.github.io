@@ -1,6 +1,8 @@
 # Mon Github mes projets
 [Publication](https://github.com/LostWin)
 
+[Mon Github](https://github.com/LostWin)
+
 # EDUCATION 
 KEYCE Informatique & Intelligence Artificielle	Yaoundé,Cameroun
 Licence en Informatique, Spécialisation en IA & Big Data	2022-Actuel
