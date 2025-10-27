@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moïse Vlad Purtis Ngos - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-white via-slate-100 to-slate-200 dark:from-gray-900 dark:via-gray-950 dark:to-black transition duration-500">
+    <header class="w-full px-8 py-6 flex justify-between items-center backdrop-blur-md bg-white/30 dark:bg-black/30 shadow-sm sticky top-0">
+      <h1 class="font-bold text-xl md:text-2xl text-red-800 dark:text-red-500">MVPN</h1>
+      <button id="theme-toggle" class="px-4 py-2 rounded-xl border border-red-800 dark:border-red-500 text-red-800 dark:text-red-500 text-sm">Mode</button>
+    </header>
+
+    <section class="flex flex-col items-center text-center mt-20 px-6">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-6">Moïse Vlad Purtis Ngos</h2>
+      <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mb-6">Étudiant en Intelligence Artificielle & Big Data, passionné par la conception de solutions innovantes et l'exploitation de la donnée pour résoudre des problématiques réelles.</p>
+      <a href="#" class="px-6 py-3 rounded-xl bg-red-800 dark:bg-red-600 text-white font-semibold shadow-md hover:scale-105 transition">Télécharger CV</a>
+    </section>
+
+    <section class="flex flex-col items-center text-center mt-16 px-6">
+      <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-red-800 dark:border-red-500 shadow-lg mb-6">
+        <img src="assets/profile.jpg" alt="Photo de profil" class="w-full h-full object-cover" />
+      </div>
+      <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-4">Futur ingénieur IA spécialisé en Machine Learning & Big Data</h3>
+    </section>
+
+    <script>
+      const html = document.documentElement;
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+        } else {
+          html.classList.add('dark');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets - Moïse Vlad Purtis Ngos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-white via-slate-100 to-slate-200 dark:from-gray-900 dark:via-gray-950 dark:to-black transition duration-500">
+    <header class="w-full px-8 py-6 flex justify-between items-center backdrop-blur-md bg-white/30 dark:bg-black/30 shadow-sm sticky top-0">
+      <a href="index.html" class="font-bold text-xl md:text-2xl text-red-800 dark:text-red-500">MVPN</a>
+      <nav class="hidden md:flex space-x-6 text-gray-800 dark:text-gray-200 font-medium">
+        <a href="index.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Accueil</a>
+        <a href="about.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">À propos</a>
+        <a href="projects.html" class="text-red-800 dark:text-red-500 border-b-2 border-red-800 dark:border-red-500">Projets</a>
+        <a href="experience.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Expérience</a>
+        <a href="contact.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Contact</a>
+        <a href="https://www.linkedin.com/in/moïse-vlad-purtis-ngos-47832a279" target="_blank" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">LinkedIn</a>
+      </nav>
+      <button id="theme-toggle" class="px-4 py-2 rounded-xl border border-red-800 dark:border-red-500 text-red-800 dark:text-red-500 text-sm">Mode</button>
+    </header>
+
+    <main class="mt-16 px-8 md:px-20 pb-20">
+      <section class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Mes Projets</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Voici une sélection de projets académiques dans lesquels j'ai appliqué l’IA, le NLP et l’analyse prédictive
+          à des cas d’usage concrets, notamment dans des environnements sensibles comme la banque.
+        </p>
+      </section>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Projet 1 : Détection de Fraude -->
+        <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl shadow-md border border-white/20 p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-red-800 dark:text-red-500 mb-2">Détection Intelligente de Fraude Bancaire</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+            Système hybride combinant Machine Learning supervisé, non supervisé et NLP pour analyser logs d’accès,
+            e-mails et transactions bancaires.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4 text-xs">
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">IA</span>
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">NLP</span>
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">Fraude</span>
+          </div>
+          <a href="#" class="mt-auto inline-block px-4 py-2 bg-red-800 dark:bg-red-600 text-white text-sm rounded-lg hover:scale-105 transition">Voir plus</a>
+        </div>
+
+        <!-- Projet 2 : Attrition RH -->
+        <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl shadow-md border border-white/20 p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-red-800 dark:text-red-500 mb-2">Analyse de l’Attrition des Employés</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+            Analyse des données RH afin d’identifier les facteurs influençant le départ des employés.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4 text-xs">
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">BI</span>
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">Power BI</span>
+          </div>
+          <a href="#" class="mt-auto inline-block px-4 py-2 bg-red-800 dark:bg-red-600 text-white text-sm rounded-lg hover:scale-105 transition">Voir plus</a>
+        </div>
+
+        <!-- Projet 3 : Analyse Prédictive des Ventes -->
+        <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl shadow-md border border-white/20 p-6 flex flex-col">
+          <h3 class="text-xl font-semibold text-red-800 dark:text-red-500 mb-2">Prédiction des Ventes</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-sm mb-3">
+            Modèle prédictif pour estimer les ventes futures à partir de données historiques d’une boutique en ligne.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4 text-xs">
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">ML</span>
+            <span class="px-2 py-1 rounded-full bg-red-800/20 text-red-800 dark:bg-red-500/20 dark:text-red-400">TensorFlow</span>
+          </div>
+          <a href="#" class="mt-auto inline-block px-4 py-2 bg-red-800 dark:bg-red-600 text-white text-sm rounded-lg hover:scale-105 transition">Voir plus</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
