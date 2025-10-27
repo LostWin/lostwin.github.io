@@ -3,157 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moïse Vlad Purtis Ngos - Portfolio</title>
+    <title>À propos - Moïse Vlad Purtis Ngos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* small helper for the slide-down menu animation */
-      .menu-enter { transform: translateY(-100%); }
-      .menu-enter-active { transform: translateY(0); transition: transform 300ms ease-out; }
-      .menu-exit { transform: translateY(0); }
-      .menu-exit-active { transform: translateY(-100%); transition: transform 250ms ease-in; }
-    </style>
   </head>
-  <body class="min-h-screen bg-gradient-to-br from-white via-slate-100 to-slate-200 dark:from-gray-900 dark:via-gray-950 dark:to-black transition-colors duration-500 text-gray-900 dark:text-gray-100">
-
-    <!-- Header / Navbar -->
-    <header class="w-full px-6 py-5 flex items-center justify-between backdrop-blur-md bg-white/30 dark:bg-black/30 shadow-sm fixed top-0 z-30">
-      <!-- Mobile hamburger (left) -->
-      <button id="burger" aria-label="Ouvrir le menu" class="md:hidden p-2 rounded-md border border-transparent hover:border-red-800 dark:hover:border-red-500">
-        <!-- simple 3-lines icon -->
-        <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-800 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <!-- Logo on right for mobile; on desktop left becomes visible too -->
-      <a href="index.html" class="ml-auto md:ml-0 font-bold text-xl md:text-2xl text-red-800 dark:text-red-500">MVPN</a>
-
-      <!-- Desktop nav -->
-      <nav class="hidden md:flex gap-6 items-center ml-6">
-        <a href="index.html" class="hover:text-red-800 dark:hover:text-red-400 transition">Accueil</a>
-        <a href="about.html" class="hover:text-red-800 dark:hover:text-red-400 transition">À propos</a>
-        <a href="projects.html" class="hover:text-red-800 dark:hover:text-red-400 transition">Projets</a>
-        <a href="experience.html" class="hover:text-red-800 dark:hover:text-red-400 transition">Expérience</a>
-        <a href="contact.html" class="hover:text-red-800 dark:hover:text-red-400 transition">Contact</a>
-        <a href="https://www.linkedin.com/in/moïse-vlad-purtis-ngos-47832a279" target="_blank" class="hover:text-red-800 dark:hover:text-red-400 transition">LinkedIn</a>
+  <body class="min-h-screen bg-gradient-to-br from-white via-slate-100 to-slate-200 dark:from-gray-900 dark:via-gray-950 dark:to-black transition duration-500">
+    <header class="w-full px-8 py-6 flex justify-between items-center backdrop-blur-md bg-white/30 dark:bg-black/30 shadow-sm sticky top-0">
+      <a href="index.html" class="font-bold text-xl md:text-2xl text-red-800 dark:text-red-500">MVPN</a>
+      <nav class="hidden md:flex space-x-6 text-gray-800 dark:text-gray-200 font-medium">
+        <a href="index.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Accueil</a>
+        <a href="about.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">À propos</a>
+        <a href="projects.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Projets</a>
+        <a href="experience.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Expérience</a>
+        <a href="contact.html" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">Contact</a>
+        <a href="https://www.linkedin.com/in/moïse-vlad-purtis-ngos-47832a279" target="_blank" class="hover:text-red-800 dark:hover:text-red-500 transition border-b-2 border-transparent hover:border-red-800 dark:hover:border-red-500">LinkedIn</a>
       </nav>
-
-      <!-- Theme toggle (desktop & mobile) -->
-      <button id="theme-toggle" class="ml-4 px-3 py-1 rounded-lg border border-red-800 dark:border-red-500 text-red-800 dark:text-red-400 text-sm">Mode</button>
+      <button id="theme-toggle" class="px-4 py-2 rounded-xl border border-red-800 dark:border-red-500 text-red-800 dark:text-red-500 text-sm">Mode</button>
     </header>
 
-    <!-- Mobile menu overlay & panel (hidden on md+) -->
-    <div id="mobile-overlay" class="fixed inset-0 z-40 hidden items-start justify-center">
-      <!-- blurred background layer -->
-      <div id="overlay-bg" class="absolute inset-0 backdrop-blur-sm bg-black/30"></div>
-      <!-- menu panel -->
-      <div id="mobile-menu" class="relative w-full max-w-3xl bg-white/40 dark:bg-black/50 backdrop-blur-lg border-b border-white/20 dark:border-black/20 p-6 pt-12">
-        <div class="flex justify-between items-center mb-6">
-          <div></div>
-          <a href="index.html" class="font-bold text-xl text-red-800 dark:text-red-500">MVPN</a>
-          <div></div>
-        </div>
-        <nav class="flex flex-col gap-4 text-lg">
-          <a href="index.html" class="py-2 px-3 rounded-md hover:bg-white/30 dark:hover:bg-white/5">Accueil</a>
-          <a href="about.html" class="py-2 px-3 rounded-md hover:bg-white/30 dark:hover:bg-white/5">À propos</a>
-          <a href="projects.html" class="py-2 px-3 rounded-md hover:bg-white/30 dark:hover:bg-white/5">Projets</a>
-          <a href="experience.html" class="py-2 px-3 rounded-md hover:bg-white/30 dark:hover:bg-white/5">Expérience</a>
-          <a href="contact.html" class="py-2 px-3 rounded-md hover:bg-white/30 dark:hover:bg-white/5">Contact</a>
-          <a href="https://www.linkedin.com/in/moïse-vlad-purtis-ngos-47832a279" target="_blank" class="py-2 px-3 rounded-md hover:bg-white/30 dark:hover:bg-white/5">LinkedIn</a>
-        </nav>
-      </div>
-    </div>
-
-    <!-- Page content -->
-    <main class="pt-28">
-      <section class="flex flex-col items-center text-center mt-8 px-6">
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Moïse Vlad Purtis Ngos</h1>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mb-6">Étudiant en Intelligence Artificielle & Big Data, passionné par la conception de solutions innovantes et l'exploitation de la donnée pour résoudre des problématiques réelles.</p>
-        <a href="assets/cv.pdf" download class="px-6 py-3 rounded-xl bg-red-800 dark:bg-red-600 text-white font-semibold shadow-md hover:scale-105 transition">Télécharger CV</a>
+    <main class="mt-16 px-8 md:px-20">
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">À propos</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
+          Étudiant en Master cybersécurité appliquée à l'IA & Big Data, avec un Bachelor en Intelligence Artificielle,
+          je conçois et développe des solutions d'aide à la décision basées sur le Machine Learning et le NLP.
+          Mon intérêt principal réside dans l'analyse prédictive, la détection des anomalies et la valorisation des données
+          dans des environnements sensibles tels que la banque.
+        </p>
       </section>
 
-      <section class="flex flex-col items-center text-center mt-12 px-6">
-        <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-red-800 dark:border-red-500 shadow-lg mb-6">
-          <img src="assets/profile.jpg" alt="Photo de profil" class="w-full h-full object-cover" />
-        </div>
-        <h3 class="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-4">Spécialisé en IA, Cybersécurité & Big Data appliquée aux environnements sensibles</h3>
-      </section>
-
-      <section class="mt-12 px-6 md:px-20">
-        <div class="max-w-4xl mx-auto backdrop-blur-lg bg-white/30 dark:bg-white/5 rounded-xl p-6 shadow-md border border-white/20">
-          <h2 class="text-2xl font-bold mb-4">Compétences clés</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="p-3">
-              <h4 class="font-semibold text-red-800 dark:text-red-400">IA & ML</h4>
-              <p class="text-sm text-gray-700 dark:text-gray-300">Python, TensorFlow, NLP, Transformers, Fine-tuning</p>
-            </div>
-            <div class="p-3">
-              <h4 class="font-semibold text-red-800 dark:text-red-400">Big Data & BI</h4>
-              <p class="text-sm text-gray-700 dark:text-gray-300">SQL, Pandas, Power BI, Tableau, Datamining</p>
-            </div>
-            <div class="p-3">
-              <h4 class="font-semibold text-red-800 dark:text-red-400">Cybersécurité</h4>
-              <p class="text-sm text-gray-700 dark:text-gray-300">Analyse de logs, Détection d'anomalies, Sécurité réseau</p>
-            </div>
+      <section class="mt-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Formation</h2>
+        <div class="space-y-6">
+          <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl p-6 shadow-md border border-white/20">
+            <h3 class="text-xl font-semibold text-red-800 dark:text-red-500">Ynov Campus Casablanca</h3>
+            <p class="text-gray-700 dark:text-gray-300">Master en Cybersécurité — 2025 - Actuel</p>
+          </div>
+          <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl p-6 shadow-md border border-white/20">
+            <h3 class="text-xl font-semibold text-red-800 dark:text-red-500">KEYCE Informatique & IA</h3>
+            <p class="text-gray-700 dark:text-gray-300">Bachelor en Informatique — IA & Big Data (2022 - 2025)</p>
           </div>
         </div>
       </section>
 
-      <section class="mt-12 px-6 md:px-20 mb-20">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-2xl font-bold mb-4">Projets phares</h2>
-          <p class="text-gray-700 dark:text-gray-300 mb-6">Découvrez une sélection de travaux : détection de fraude bancaire, analyse d'attrition et modèles de prévision des ventes.</p>
-          <div class="grid md:grid-cols-3 gap-6">
-            <a href="projects.html" class="backdrop-blur-lg bg-white/30 dark:bg-white/5 rounded-xl p-4 shadow-md border border-white/20 hover:scale-105 transition"> 
-              <h3 class="font-semibold text-red-800 dark:text-red-400">Détection Fraude IA</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300">Système hybride ML + NLP pour logs, e-mails et transactions.</p>
-            </a>
-            <a href="projects.html" class="backdrop-blur-lg bg-white/30 dark:bg-white/5 rounded-xl p-4 shadow-md border border-white/20 hover:scale-105 transition"> 
-              <h3 class="font-semibold text-red-800 dark:text-red-400">Attrition RH</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300">Analyse des facteurs d'attrition via BI et ML.</p>
-            </a>
-            <a href="projects.html" class="backdrop-blur-lg bg-white/30 dark:bg-white/5 rounded-xl p-4 shadow-md border border-white/20 hover:scale-105 transition"> 
-              <h3 class="font-semibold text-red-800 dark:text-red-400">Prédiction Ventes</h3>
-              <p class="text-sm text-gray-700 dark:text-gray-300">Modèle prédictif pour ventes futures (TensorFlow).</p>
-            </a>
+      <section class="mt-12 mb-20">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Compétences</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl p-4 shadow-md border border-white/20">
+            <h4 class="font-semibold text-red-800 dark:text-red-500 mb-2">IA & ML</h4>
+            <p class="text-gray-700 dark:text-gray-300 text-sm">Python, TensorFlow, NLP, Transformers, Fine-tuning</p>
+          </div>
+          <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl p-4 shadow-md border border-white/20">
+            <h4 class="font-semibold text-red-800 dark:text-red-500 mb-2">Data & BI</h4>
+            <p class="text-gray-700 dark:text-gray-300 text-sm">SQL, Pandas, Power BI, Tableau, Datamining</p>
+          </div>
+          <div class="backdrop-blur-lg bg-white/30 dark:bg-white/10 rounded-xl p-4 shadow-md border border-white/20">
+            <h4 class="font-semibold text-red-800 dark:text-red-500 mb-2">Cybersécurité</h4>
+            <p class="text-gray-700 dark:text-gray-300 text-sm">Analyse de logs, Détection d'anomalies, Sécurité réseau</p>
           </div>
         </div>
       </section>
     </main>
-
-    <script>
-      // Theme toggle
-      const html = document.documentElement;
-      const btnTheme = document.getElementById('theme-toggle');
-      btnTheme.addEventListener('click', () => {
-        html.classList.toggle('dark');
-      });
-
-      // Mobile menu logic: click burger -> show overlay; click outside (overlay-bg) closes it
-      const burger = document.getElementById('burger');
-      const overlay = document.getElementById('mobile-overlay');
-      const overlayBg = document.getElementById('overlay-bg');
-
-      function openMenu() {
-        overlay.classList.remove('hidden');
-      }
-      function closeMenu() {
-        overlay.classList.add('hidden');
-      }
-
-      burger.addEventListener('click', (e) => {
-        openMenu();
-      });
-
-      // Close when tapping the blurred background (but not when tapping inside the menu panel)
-      overlayBg.addEventListener('click', () => {
-        closeMenu();
-      });
-
-      // Accessibility: close menu on escape
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeMenu();
-      });
-    </script>
   </body>
 </html>
+
