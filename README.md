@@ -1,7 +1,6 @@
 # Portfolio — Moïse Vlad Purtis Ngos
 
-Mon portfolio professionnel en ligne : [Mon Github](https://lostwin.github.io)
-[Mon Github](https://github.com/LostWin)
+Mon portfolio professionnel en ligne : [My Folio](https://lostwin.github.io)
 
 Ce dépôt contient les pages statiques (index.html, about.html, projects.html, experience.html, contact.html) et le dossier `assets/` (photo, CV).
 
